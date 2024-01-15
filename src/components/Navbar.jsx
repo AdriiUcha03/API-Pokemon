@@ -1,6 +1,6 @@
 import { NavLink, useNavigate } from 'react-router-dom'
 import pokebola from '../../public/pokebola.png';
-import { UserContext } from '../context/userContext';
+import { UserContext } from '../context/UserContext';
 import { useContext } from 'react';
 
 const Navbar = () => {
@@ -16,7 +16,7 @@ const Navbar = () => {
 
   const handleLogin = () => {
     setUser({ name: "Adrián Ucha" })
-    navigate("/dashboard")
+    navigate("/MiPokedex")
   }
 
 
@@ -28,14 +28,20 @@ const Navbar = () => {
               </NavLink>
           <nav>
               <NavLink to="/">Home</NavLink>
-              user?(
-                <NavLink to="/MiPokedex">Mi Pokedex</NavLink>
-                <button onClick={()=> cerrarSesion()}>Logout</button>
-                ):(
-                  <button onClick={()=> handleLogin()}>Login</button>
-                  )
+              {user && (
+                <>
+                  <NavLink to="/MiPokedex">Mi Pokedex</NavLink>
+                </>
+              )}
               <NavLink to="/Contacto">Contacto</NavLink>
-              <button className='login'>Iniciar Sesión</button>
+              {user?(
+                <>
+                  <button className='login' onClick={()=> cerrarSesion()}>Cerrar Sesión</button>
+                </>
+                
+                ):(
+                  <button className='login' onClick={()=> handleLogin()}>Iniciar Sesión</button>
+                  )}
           </nav>
         </header>
     </>
