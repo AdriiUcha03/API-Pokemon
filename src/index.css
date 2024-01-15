@@ -5,7 +5,7 @@
 }
 
 body {
-  background-color: white;
+  background-color: #E6E9ED;
 }
 
 header {
@@ -21,19 +21,26 @@ header {
 
 
 nav{
-  width: 90%;
+  width: 100%;
   display: flex;
   flex-wrap: nowrap;
-  justify-content: space-between;
+  justify-content: end;
   align-items: center;
 }
 
 .login{
-  width: 10%;
+  margin-left: 50px;
+  margin-right: 50px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
+
 }
 
 nav a {
   text-decoration: none;
+  font-size: 20px;
   color: #ED5564;
-  padding: 10px 20px;
+  padding: 10px 40px;
 }
