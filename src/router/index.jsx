@@ -1,9 +1,10 @@
 import { createBrowserRouter } from 'react-router-dom'
 import LayoutPublico from '../layouts/LayoutPublico'
 import LayoutPrivado from '../layouts/LayoutPrivado'
-import Home from '../pages/Home'
+import Home from '../pages/Inicio'
 import MiPoquedex from '../pages/MiPoquedex'
 import Contacto from '../pages/Contacto'
+import InicioSesion from '../pages/InicioSesion'
 
 const router = createBrowserRouter([
     //Creamos un ruta anidada a la que le pondremos rutas individuales
@@ -26,6 +27,9 @@ const router = createBrowserRouter([
            },{
             path: "/Contacto",
             element: <Contacto/>
+           },{
+            path: "/InicioSesion",
+            element: <InicioSesion/>
            }
         ]
     }

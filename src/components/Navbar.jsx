@@ -27,7 +27,7 @@ const Navbar = () => {
                 <img className='logotitulo' src={pokebola} alt='Pokeball'/>
               </NavLink>
           <nav>
-              <NavLink to="/">Home</NavLink>
+              <NavLink to="/">Inicio</NavLink>
               {user && (
                 <>
                   <NavLink to="/MiPokedex">Mi Pokedex</NavLink>
@@ -40,7 +40,7 @@ const Navbar = () => {
                 </>
                 
                 ):(
-                  <button className='login' onClick={()=> handleLogin()}>Iniciar Sesión</button>
+                  <button className='login' onClick={()=> navigate("/InicioSesion") }>Iniciar Sesión</button>
                   )}
           </nav>
         </header>
