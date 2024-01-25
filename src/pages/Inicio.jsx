@@ -1,9 +1,10 @@
+import LoadersPokemon from "../components/LoadersPokemon"
 
 const Inicio = () => {
   return (
-    <div>
-      
-    </div>
+    <main className="home">
+        <LoadersPokemon/>
+    </main>
   )
 }
 
